@@ -29,21 +29,26 @@ This is a personal wallet and budgeting application built with NextJS and TypeSc
 ### Installation
 
 1. Clone the repository:
-   ```
+
+   ```bash
    git clone https://github.com/ridzeal/zeal-wallet.git
    ```
 
 2. Navigate to the project directory:
-   ```
+
+   ```bash
    cd zeal-wallet
    ```
 
 3. Install dependencies:
-   ```
+
+   ```bash
    npm install
    ```
+
    or
-   ```
+
+   ```bash
    yarn install
    ```
 
@@ -51,11 +56,13 @@ This is a personal wallet and budgeting application built with NextJS and TypeSc
 
 ### Running the Development Server
 
-```
+```bash
 npm run dev
 ```
+
 or
-```
+
+```bash
 yarn dev
 ```
 
@@ -63,7 +70,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Project Structure
 
-```
+```bash
 zeal-wallet/
 ├── components/
 ├── app/
