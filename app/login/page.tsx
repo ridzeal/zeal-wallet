@@ -6,8 +6,8 @@ import Link from 'next/link';
 import styles from './LoginPage.module.css';
 
 const LoginPage = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState('admin');
+  const [password, setPassword] = useState('admin');
   const [error, setError] = useState('');
   const router = useRouter();
 
@@ -15,21 +15,12 @@ const LoginPage = () => {
     e.preventDefault();
     setError('');
 
-    try {
-      const response = await fetch('/api/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, password }),
-      });
-
-      if (response.ok) {
-        router.push('/dashboard'); // Redirect to dashboard on successful login
-      } else {
-        const data = await response.json();
-        setError(data.message || 'Login failed');
-      }
-    } catch (err) {
-      setError('An error occurred. Please try again.');
+    // Hardcoded user authentication
+    if (username === 'admin' && password === 'admin') {
+      localStorage.setItem('isLoggedIn', 'true');
+      router.push('/app');
+    } else {
+      setError('Invalid username or password');
     }
   };
 

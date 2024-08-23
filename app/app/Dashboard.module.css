@@ -1,0 +1,121 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background-color: #1a73e8;
+  width: 250px;
+  transition: all 0.3s ease;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  bottom: 0;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.closeSidebarButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.nav {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.navItem {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.navItem:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.logoutButton {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: #d93025;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.main {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: white;
+  margin-left: 0;
+  transition: margin-left 0.3s ease;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.menuButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.balanceSection,
+.billsSection,
+.walletsSection {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.balanceAmount {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1a73e8;
+}
+
+.billsList,
+.walletsList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.billsList li,
+.walletsList li {
+  padding: 10px 0;
+  border-bottom: 1px solid #dadce0;
+}
+
+@media (min-width: 769px) {
+  .sidebar.open + .main {
+    margin-left: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding-left: 20px;
+  }
+}
