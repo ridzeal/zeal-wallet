@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a personal wallet and budgeting application built with NextJS and TypeScript. It allows users to track their expenses, manage budgets, and gain insights into their financial habits.
+Zeal Wallet is a personal wallet and budgeting application built with NextJS and TypeScript. It allows users to track their expenses, manage budgets, and gain insights into their financial habits.
 
 ## Features
 
